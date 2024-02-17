@@ -21,6 +21,9 @@
       <entry key="common">
         <State />
       </entry>
+      <entry key="wearos">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "YAALC"
 include(":app")
 include(":common")
+include(":wearos")
