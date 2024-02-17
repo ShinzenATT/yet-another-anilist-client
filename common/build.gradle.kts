@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.apollographql.apollo3") version "4.0.0-beta.4"
 }
 
 android {
@@ -32,7 +33,18 @@ android {
     }
 }
 
+apollo {
+    service("anilist") {
+        packageName.set("net.shinzle.yaalc.anilist.graphql")
+        introspection {
+            endpointUrl.set("https://graphql.anilist.co")
+            schemaFile.set(file("src/main/graphql/schema.graphqls"))
+        }
+    }
+}
+
 dependencies {
+    implementation("com.apollographql.apollo3:apollo-runtime")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
