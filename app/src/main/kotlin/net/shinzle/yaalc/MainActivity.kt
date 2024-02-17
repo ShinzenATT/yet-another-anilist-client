@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import net.shinzle.yaalc.helloWorld
 import net.shinzle.yaalc.ui.theme.YAALCTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = helloWorld() + " $name!",
         modifier = modifier
     )
 }
